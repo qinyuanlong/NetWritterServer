@@ -1,6 +1,6 @@
-package com.qyl.service;
+package com.qyl.mapper;
 
-import com.qyl.controllers.Product;
+import com.qyl.vo.Product;
 import org.apache.ibatis.annotations.Select;
 import java.util.List;
 
@@ -9,7 +9,7 @@ import java.util.List;
  */
 
 
-public interface ProductService {
+public interface ProductMapper {
 
     @Select("select * from products")
     public List<Product> findAll();

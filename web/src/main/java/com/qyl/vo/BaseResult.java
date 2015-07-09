@@ -4,7 +4,7 @@ package com.qyl.vo;
 /**
  * Created by qinyuanlong on 15/7/7.
  */
-public class BaseJsonResult {
+public class BaseResult {
     public int getResultId() {
         return resultId;
     }

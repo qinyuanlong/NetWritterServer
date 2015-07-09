@@ -1,4 +1,4 @@
-package com.qyl.controllers;
+package com.qyl.vo;
 
 /**
  * Created by qinyuanlong on 15/7/1.
