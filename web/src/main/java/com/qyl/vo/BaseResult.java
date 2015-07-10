@@ -4,7 +4,7 @@ package com.qyl.vo;
 /**
  * Created by qinyuanlong on 15/7/7.
  */
-public class BaseResult {
+public class BaseResult<T> {
     public int getResultId() {
         return resultId;
     }
@@ -21,15 +21,15 @@ public class BaseResult {
         this.message = message;
     }
 
-    public Object getData() {
+    public T getData() {
         return data;
     }
 
-    public void setData(Object data) {
+    public void setData(T data) {
         this.data = data;
     }
 
-    private int resultId;
-    private String message;
-    private Object data;
+    private int resultId = BizCode.SUCCESS;
+    private String message = BizCode.SUCCESS_MESSAGE;
+    private T data;
 }

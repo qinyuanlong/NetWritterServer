@@ -6,8 +6,8 @@ CREATE TABLE users(
   user_name VARCHAR(30),
   password  VARCHAR(30),
   nick      VARCHAR(30),
-  create_at DATETIME,
-  update_at DATETIME
+  create_at TIMESTAMP,
+  update_at TIMESTAMP
 );
 
 
