@@ -29,7 +29,7 @@ public class AppControllerTest {
     private MockMvc mockMvc;
 
     @InjectMocks
-    DemoController appTest;
+    UserController appTest;
 
     @Before
     public void setup(){

@@ -13,4 +13,7 @@ public class BizCode {
 	public static final String PARAM_ERROR_MESSAGE = "参数有误";
 
 	//=============业务返回码===========
+	public static final int USER_EXIST = 2001;
+	public static final String USER_EXIST_MESSAGE = "用户已存在";
+
 }
