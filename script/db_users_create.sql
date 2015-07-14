@@ -6,7 +6,6 @@ CREATE TABLE users(
   user_name VARCHAR(30),
   password  VARCHAR(30),
   nick      VARCHAR(30),
-  mail      VARCHAR(30),
   create_at TIMESTAMP,
   update_at TIMESTAMP
 );

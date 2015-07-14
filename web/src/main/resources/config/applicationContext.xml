@@ -13,7 +13,6 @@
 
     <context:component-scan base-package="com.qyl.*" />
     <aop:aspectj-autoproxy proxy-target-class="true"/>
-    <bean id="demoAop" class="com.qyl.aop.ParamsCheckAop"/>
     <mvc:annotation-driven />
 
 

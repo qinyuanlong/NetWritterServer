@@ -1,0 +1,11 @@
+---
+
+mail_163_test:
+    name: bhbh113@163.com
+    password: dragon113
+
+welcome_letters: |
+    欢迎使用网络大作家，您的账户信息如下:
+    用户名:@username
+    密码:@password
+    感谢使用网络大作家，使用过程中遇到任何问题，可以发送邮件到qinyuanlong@gmail.com。

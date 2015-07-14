@@ -1,6 +1,7 @@
 package com.qyl.vo;
 
 import com.sun.istack.internal.NotNull;
+import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import java.sql.Timestamp;
@@ -14,6 +15,7 @@ public class User {
     @NotEmpty(message = "bunengweikong")
     private String id;
     @NotEmpty
+    @Email
     private String userName;
     private String password;
     private String nick;
