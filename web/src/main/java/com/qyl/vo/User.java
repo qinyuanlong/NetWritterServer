@@ -1,6 +1,5 @@
 package com.qyl.vo;
 
-import com.sun.istack.internal.NotNull;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 
@@ -10,13 +9,11 @@ import java.util.Date;
 /**
  * Created by qinyuanlong on 15/7/9.
  */
-public class User {
+public class User extends BaseVo{
 
-    @NotEmpty(message = "bunengweikong")
-    private String id;
     @NotEmpty
     @Email
-    private String userName;
+    private String mail;
     private String password;
     private String nick;
     private Timestamp createAt = new Timestamp(new Date().getTime());
@@ -38,20 +35,12 @@ public class User {
         this.createAt = createAt;
     }
 
-    public String getId() {
-        return id;
+    public String getMail() {
+        return mail;
     }
 
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setMail(String mail) {
+        this.mail = mail;
     }
 
     public String getPassword() {
@@ -69,6 +58,5 @@ public class User {
     public void setNick(String nick) {
         this.nick = nick;
     }
-
 
 }

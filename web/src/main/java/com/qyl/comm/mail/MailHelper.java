@@ -1,23 +1,32 @@
 package com.qyl.comm.mail;
 
+import com.sun.mail.util.logging.MailHandler;
 import org.ho.yaml.Yaml;
-
-import java.io.FileNotFoundException;
 import java.util.HashMap;
 
 /**
  * Created by qinyuanlong on 15/7/14.
  */
-public class MainHelper {
-	public static void sendRegisterSuccess(String mailAddress) throws FileNotFoundException{
-		HashMap map = Yaml.loadType((new Object()).getClass().getResourceAsStream("/config/mail.yaml"), HashMap.class);
+public class MailHelper {
+	public static void sendRegisterSuccess(String mailAddress){
+		HashMap map = null;
+		try{
+			map = Yaml.loadType((new MailHandler()).getClass().getResourceAsStream("/config/mail.yaml"), HashMap.class);
+		}catch (Exception e){
+			e.printStackTrace();
+		}
 		String title = ((HashMap)map.get("welcome_letters")).get("title").toString();
 		String content = ((HashMap)map.get("welcome_letters")).get("content").toString();
 		sendSimpleMail(mailAddress,title,content);
 	}
 
-	private static void sendSimpleMail(String mailAddress, String title, String content) throws FileNotFoundException{
-		HashMap map = Yaml.loadType((new Object()).getClass().getResourceAsStream("/config/mail.yaml"), HashMap.class);
+	private static void sendSimpleMail(String mailAddress, String title, String content){
+		HashMap map = null;
+		try{
+			map = Yaml.loadType((new MailHelper()).getClass().getResourceAsStream("/config/mail.yaml"), HashMap.class);
+		}catch (Exception e){
+			e.printStackTrace();
+		}
 		MailSenderInfo mailSenderInfo = new MailSenderInfo();
 		mailSenderInfo.setMailServerHost("smtp.163.com");
 		mailSenderInfo.setMailServerPort("25");
@@ -42,7 +51,7 @@ public class MainHelper {
 //		mailInfo.setMailServerHost("smtp.163.com");
 //		mailInfo.setMailServerPort("25");
 //		mailInfo.setValidate(true);
-//		mailInfo.setUserName("han2000lei@163.com");
+//		mailInfo.setMail("han2000lei@163.com");
 //		mailInfo.setPassword("**********");//您的邮箱密码
 //		mailInfo.setFromAddress("han2000lei@163.com");
 //		mailInfo.setToAddress("han2000lei@163.com");

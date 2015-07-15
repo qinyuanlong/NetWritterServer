@@ -1,5 +1,6 @@
 package com.qyl.controllers;
 
+import com.qyl.exception.UserExistException;
 import com.qyl.service.UserService;
 import com.qyl.vo.BaseResult;
 import com.qyl.vo.User;
@@ -20,15 +21,11 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    /**
-     * 添加用户   TODO:参数验证
-     * @param user
-     * @return
-     */
-    @RequestMapping(value = "addUser",method = RequestMethod.POST)
+
+    @RequestMapping(value = "register",method = RequestMethod.POST)
     @ResponseBody
-    public BaseResult addUser(@Valid User user,BindingResult bindingResult){
-        userService.addUser(user);
+    public BaseResult register(@Valid User user,BindingResult bindingResult) throws UserExistException{
+        userService.registter(user);
         BaseResult result = new BaseResult();
         return result;
     }

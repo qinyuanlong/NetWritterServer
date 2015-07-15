@@ -35,14 +35,9 @@ public class ParamsCheckAop {
 			return result;
 		}
 
-		try {
-			Object retVal = proceedingJoinPoint.proceed();
-			System.out.println(retVal);
-			return retVal;
-		} catch (Exception e) {
-			System.out.println("AOP异常");
-			return null;
-		}
+		Object retVal = proceedingJoinPoint.proceed();
+		System.out.println(retVal);
+		return retVal;
 	}
 
 }

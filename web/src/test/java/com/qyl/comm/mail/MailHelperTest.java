@@ -13,7 +13,7 @@ public class MailHelperTest {
 	public void sendRegisterSuccessTest(){
 		Exception exception = null;
 		try {
-			MainHelper.sendRegisterSuccess("251717592@qq.com");
+			MailHelper.sendRegisterSuccess("251717592@qq.com");
 		}catch (Exception e){
 			exception = e;
 		}

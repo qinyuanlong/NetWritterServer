@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 @Repository("userMapper")
 public interface UserMapper {
 
-    @Insert("insert into users(id,user_name,password,nick,create_at,update_at) values(#{id},#{userName},#{password},#{nick},#{createAt},#{updateAt})")
+    @Insert("insert into users(id,mail,password,nick,create_at,update_at) values(#{id},#{mail},#{password},#{nick},#{createAt},#{updateAt})")
     void add(User user);
 
     @Select("select count(*) from users where mail = #{mail}")
