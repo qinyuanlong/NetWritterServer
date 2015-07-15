@@ -1,11 +1,20 @@
 ---
 
-mail_163_test:
+mail_163_bhbh113:
     name: bhbh113@163.com
     password: dragon113
 
-welcome_letters: |
-    欢迎使用网络大作家，您的账户信息如下:
-    用户名:@username
-    密码:@password
-    感谢使用网络大作家，使用过程中遇到任何问题，可以发送邮件到qinyuanlong@gmail.com。
+welcome_letters:
+    title: 恭喜注册成功网络大作家
+    content: |
+        欢迎使用网络大作家，您的账户信息如下:
+        用户名:@username
+        密码:@password
+        使用过程中遇到任何问题，可以发送邮件到qinyuanlong@gmail.com。
+
+reset_password_letters:
+    title: 找回密码
+    content: |
+        请点击下面的链接重置密码:
+        <a href="http://www.aaa.com">重置密码</a>
+        如果以上链接无法打开网页，请拷贝http://www.aaa.com/到地址栏打开链接。

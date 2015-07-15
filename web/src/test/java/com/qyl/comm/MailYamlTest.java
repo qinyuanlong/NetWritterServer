@@ -2,8 +2,6 @@ package com.qyl.comm;
 
 import org.ho.yaml.Yaml;
 import org.junit.Test;
-
-import java.io.FileInputStream;
 import java.util.HashMap;
 import static org.junit.Assert.*;
 
