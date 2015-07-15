@@ -1,5 +1,6 @@
 package com.qyl.exception;
 
+import com.qyl.exception.user.UserExistException;
 import com.qyl.vo.BaseResult;
 import com.qyl.vo.BizCode;
 import org.springframework.web.bind.annotation.ControllerAdvice;

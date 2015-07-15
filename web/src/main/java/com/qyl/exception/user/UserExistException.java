@@ -1,4 +1,4 @@
-package com.qyl.exception;
+package com.qyl.exception.user;
 
 import com.qyl.vo.BizCode;
 

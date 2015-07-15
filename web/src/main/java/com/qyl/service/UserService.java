@@ -1,7 +1,7 @@
 package com.qyl.service;
 
 import com.qyl.comm.mail.MailHelper;
-import com.qyl.exception.UserExistException;
+import com.qyl.exception.user.UserExistException;
 import com.qyl.mapper.UserMapper;
 import com.qyl.vo.User;
 import org.springframework.beans.factory.annotation.Autowired;

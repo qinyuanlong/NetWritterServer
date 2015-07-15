@@ -1,6 +1,6 @@
 package com.qyl.controllers;
 
-import com.qyl.exception.UserExistException;
+import com.qyl.exception.user.UserExistException;
 import com.qyl.service.UserService;
 import com.qyl.vo.BaseResult;
 import com.qyl.vo.User;
