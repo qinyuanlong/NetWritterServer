@@ -15,5 +15,6 @@ public class BizCode {
 	//=============业务返回码===========
 	public static final int USER_EXIST = 2001;
 	public static final String USER_EXIST_MESSAGE = "用户已存在";
-
+	public static final int NAME_OR_PASSWORD_ERROR = 2002;
+	public static final String NAME_OR_PASSWORD_ERROR_MESSAGE = "帐号信息有误";
 }

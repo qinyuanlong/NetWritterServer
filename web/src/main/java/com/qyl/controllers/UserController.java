@@ -2,7 +2,9 @@ package com.qyl.controllers;
 
 import com.qyl.exception.user.UserExistException;
 import com.qyl.service.UserService;
+import com.qyl.service.interfaces.IUserService;
 import com.qyl.vo.BaseResult;
+import com.qyl.vo.BizCode;
 import com.qyl.vo.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,14 +21,22 @@ import javax.validation.Valid;
 public class UserController {
 
     @Autowired
-    private UserService userService;
-
+    private IUserService userService;
 
     @RequestMapping(value = "register",method = RequestMethod.POST)
     @ResponseBody
     public BaseResult register(@Valid User user,BindingResult bindingResult) throws UserExistException{
-        userService.registter(user);
-        BaseResult result = new BaseResult();
-        return result;
+        userService.register(user);
+        return new BaseResult();
+    }
+
+    @RequestMapping(value = "login",method = RequestMethod.POST)
+    @ResponseBody
+    public BaseResult login(@Valid User user,BindingResult bindingResult){
+        if(userService.login(user) > 0) {
+            return new BaseResult();
+        }else{
+            return new BaseResult(BizCode.NAME_OR_PASSWORD_ERROR,BizCode.NAME_OR_PASSWORD_ERROR_MESSAGE);
+        }
     }
 }

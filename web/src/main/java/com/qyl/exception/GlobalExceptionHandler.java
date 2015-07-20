@@ -13,6 +13,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @ControllerAdvice
 public class GlobalExceptionHandler {
 
+
+
+	/**
+	 * 处理注册时用已存在的email注册
+	 * @param e
+	 * @return
+	 */
 	@ExceptionHandler(UserExistException.class)
 	@ResponseBody
 	public BaseResult handleUserExist(UserExistException e){

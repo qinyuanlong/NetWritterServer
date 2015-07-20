@@ -5,6 +5,14 @@ package com.qyl.vo;
  * Created by qinyuanlong on 15/7/7.
  */
 public class BaseResult<T> {
+
+    public BaseResult(){}
+
+    public BaseResult(int id,String msg){
+        this.resultId = id;
+        this.message = msg;
+    }
+
     public int getResultId() {
         return resultId;
     }

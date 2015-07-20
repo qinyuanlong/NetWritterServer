@@ -16,4 +16,7 @@ public interface UserMapper {
 
     @Select("select count(*) from users where mail = #{mail}")
     int find(String mail);
+
+    @Select("select count(*) from users where mail = #{mail} and password = #{password}")
+    int login(User user);
 }
