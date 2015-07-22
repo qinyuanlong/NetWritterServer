@@ -12,6 +12,8 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 /**
@@ -32,8 +34,9 @@ public class UserController {
 
     @RequestMapping(value = "login",method = RequestMethod.POST)
     @ResponseBody
-    public BaseResult login(@Valid User user,BindingResult bindingResult){
+    public BaseResult login(@Valid User user,BindingResult bindingResult,HttpSession session){
         if(userService.login(user) > 0) {
+            session.setAttribute("auth",user.getMail());
             return new BaseResult();
         }else{
             return new BaseResult(BizCode.NAME_OR_PASSWORD_ERROR,BizCode.NAME_OR_PASSWORD_ERROR_MESSAGE);

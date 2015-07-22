@@ -3,6 +3,8 @@ package com.qyl.service.interfaces;
 import com.qyl.exception.user.UserExistException;
 import com.qyl.vo.User;
 
+import javax.servlet.http.HttpSession;
+
 /**
  * Created by qinyuanlong on 15/7/20.
  */

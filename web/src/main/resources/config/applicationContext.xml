@@ -18,7 +18,9 @@
         <mvc:interceptor>
             <!--设置拦截的路径-->
             <mvc:mapping path="/*" />
-            <bean class="com.qyl.interceptor.ErrorInterceptor" />
+            <!--<mvc:exclude-mapping path="/login" />-->
+            <mvc:exclude-mapping path="/register" />
+            <bean class="com.qyl.interceptor.GlobalInterceptor" />
         </mvc:interceptor>
     </mvc:interceptors>
 

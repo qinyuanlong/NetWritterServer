@@ -8,6 +8,8 @@ import com.qyl.vo.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.HttpSession;
+
 /**
  * Created by qinyuanlong on 15/7/9.
  */
@@ -26,6 +28,12 @@ public class UserService implements IUserService{
         MailHelper.sendRegisterSuccess(user.getMail());
     }
 
+    /**
+     * TODO:服务端记录用户登录信息
+     *
+     * @param user
+     * @return
+     */
     public int login(User user){
         return userMapper.login(user);
     }
